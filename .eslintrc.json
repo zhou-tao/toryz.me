@@ -1,4 +1,7 @@
 {
   "root": true,
-  "extends": "@toryz"
+  "extends": "@toryz",
+  "rules": {
+    "import/no-named-as-default": "off"
+  }
 }

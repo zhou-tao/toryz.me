@@ -1,14 +1,20 @@
 import { defineConfig } from 'vitepress'
+import Unocss from 'unocss/vite'
 import { navbar, sidebar } from '../config'
 
 export default defineConfig({
-  base: '/blog/',
+  // base: '/blog/',
   title: 'Blog',
   description: '个人极简博客。',
   appearance: 'dark',
   lang: 'zh',
   lastUpdated: true,
-  cleanUrls: 'with-subfolders',
+  cleanUrls: true,
+  vite: {
+    plugins: [
+      Unocss() as any
+    ]
+  },
   locales: {
     root: {
       label: '简体中文',
@@ -40,17 +46,11 @@ export default defineConfig({
       }
     }
   },
-  head: [
-    [
-      'link',
-      { rel: 'icon', href: '/logo.svg' }
-    ]
-  ],
   themeConfig: {
-    logo: '/logo.svg',
     i18nRouting: true,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/zhou-tao/blog' }
+      { icon: 'heart-pulse', title: '为爱发电', link: 'https://afdian.net/a/toryz?tab=home' },
+      { icon: 'github', title: 'Github', link: 'https://github.com/zhou-tao' }
     ],
     algolia: {
       appId: 'H9RIARRVX5',
