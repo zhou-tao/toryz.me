@@ -30,8 +30,8 @@ export default defineConfig({
     presetIcons({
       warn: true,
       extraProperties: {
-        'width': '1.2rem',
-        'height': '1.2rem',
+        'width': '1.25rem',
+        'height': '1.25rem',
         'display': 'inline-block',
         'vertical-align': 'text-bottom'
       }

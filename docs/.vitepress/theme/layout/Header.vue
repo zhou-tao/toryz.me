@@ -16,7 +16,7 @@
       <a v-for="(socialLink, index) in socialLinks" :key="index" :href="socialLink.link" :title="socialLink.title">
         <div :class="`i-ri-${socialLink.icon}-line`" />
       </a>
-      <a href="#">
+      <a cursor-pointer>
         <div :class="isDark ? 'i-ri-sun-line' : 'i-ri-moon-line'" @click="isDark = !isDark" />
       </a>
     </nav>

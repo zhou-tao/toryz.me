@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <footer op-50>
-    2023-PRESENT &copy; toryz
+  <footer mt-10 mb-6 op-50>
+    MIT LICENSE 2023-PRESENT &copy; toryz
   </footer>
 </template>
 
