@@ -1,0 +1,242 @@
+.article {
+  --at: #555;
+  --at-deep: #222;
+  --at-deeper: #000;
+  --at-code-bg: #f8f8f8;
+}
+
+html.dark .article {
+  --at: #bbb;
+  --at-deep: #ddd;
+  --at-deeper: #fff;
+  --at-code-bg: #0e0e0e;
+}
+
+/* article base css */
+.article {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* h1-h5 */
+.article h1 {
+  color: var(--at-deeper);
+  font-weight: 800;
+  font-size: 2.25em;
+  margin-bottom: .8888889em;
+  line-height: 1.1111111;
+}
+.article h2 {
+  color: var(--at-deep);
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3333333;
+}
+.article h3 {
+  color: var(--at);
+  font-weight: 600;
+  font-size: 1.25em;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  line-height: 1.6;
+}
+.article h4 {
+  color: var(--at);
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+.article h5 {
+  color: var(--at);
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-top: 1.4em;
+  margin-bottom: 0.4em;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+/* a */
+.article a {
+  color: var(--at-deeper);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(125, 125, 125, 0.5);
+  transition: border 0.3s ease-in-out;
+}
+.article a:hover {
+  border-bottom: 1px dashed var(--at);
+}
+.article a code {
+  color: inherit;
+}
+
+/* anchor */
+.article .header-anchor {
+  float: left;
+  margin-top: 0.125em;
+  margin-left: -1.2em;
+  padding-right: 0.5em;
+  font-size: 0.85em;
+  text-decoration: none;
+  border: 0 !important;
+  opacity: 0;
+}
+.article .header-anchor:before {
+  content: "#";
+}
+
+.article h1:hover .header-anchor,
+.article h1:focus .header-anchor,
+.article h2:hover .header-anchor,
+.article h2:focus .header-anchor,
+.article h3:hover .header-anchor,
+.article h3:focus .header-anchor,
+.article h4:hover .header-anchor,
+.article h4:focus .header-anchor,
+.article h5:hover .header-anchor,
+.article h5:focus .header-anchor,
+.article h6:hover .header-anchor,
+.article h6:focus .header-anchor {
+  opacity: 0.5;
+}
+
+/* strong */
+.article strong {
+  color: var(--at-deep);
+  font-weight: 600;
+}
+
+/* code */
+.article code {
+  color: var(--at-deep);
+  font-weight: 600;
+  font-size: 0.875em;
+}
+.article code::before {
+  content: "`";
+}
+.article code::after {
+  content: "`";
+}
+.article a code {
+  color: #111827;
+}
+
+/* code by shiki */
+.article pre {
+  color: #e5e7eb;
+  overflow-x: auto;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+  margin-top: 1.7142857em;
+  margin-bottom: 1.7142857em;
+  border-radius: 0.375rem;
+  padding-top: 0.8571429em;
+  padding-right: 1.1428571em;
+  padding-bottom: 0.8571429em;
+  padding-left: 1.1428571em;
+}
+.article pre code {
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  padding: 0;
+  font-weight: 400;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+.article pre:not(.shiki) {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+.article .shiki {
+  font-family: 'DM Mono', 'Input Mono', 'Fira Code', monospace;
+  font-size: 0.92em;
+  line-height: 1.4;
+  margin: 0.5em 0;
+  background-color: var(--at-code-bg) !important;
+
+}
+.shiki code::before,
+.shiki code::after {
+  content: none;
+}
+
+html.dark .shiki,
+html.dark .shiki span {
+  background-color: var(--at-code-bg) !important;
+}
+
+/* blockquote */
+.article blockquote {
+  font-weight: 500;
+  font-style: italic;
+  color: inherit;
+  border-left-width: 0.25rem;
+  border-color: rgba(125,125,125,0.3);
+  quotes: "\201C""\201D""\2018""\2019";
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  padding-left: 1em;
+}
+.article blockquote p:first-of-type::before {
+  content: open-quote;
+}
+.article blockquote p:last-of-type::after {
+  content: close-quote;
+}
+
+/* ol */
+.article ol > li {
+  position: relative;
+  padding-left: 1.75em;
+}
+.article ol > li::before {
+  content: counter(list-item, var(--list-counter-style, decimal)) ".";
+  position: absolute;
+  font-weight: 400;
+  color: #6b7280;
+  left: 0;
+}
+
+/* ul */
+.article ul > li {
+  position: relative;
+  padding-left: 1.75em;
+}
+.article ul > li::before {
+  content: "";
+  position: absolute;
+  background-color: #d1d5db;
+  border-radius: 50%;
+  width: 0.375em;
+  height: 0.375em;
+  top: calc(0.875em - 0.1875em);
+  left: 0.25em;
+}
+.article hr {
+  border-color: rgba(125,125,125,0.3);
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/* img */
+.article img {
+  width: 100%;
+}
+.article p > img {
+  width: 100%;
+  --uno: shadow rounded-lg;
+  transform: scale(1.05);
+  margin: 2.6em 0;
+}

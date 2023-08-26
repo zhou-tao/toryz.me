@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import { useData } from 'vitepress'
+  import { isDark, toggleDark } from '../composables/useDark'
 
-  const { isDark, site } = useData()
+  const { site } = useData()
 
   const { socialLinks = [] } = site.value?.themeConfig
 </script>
@@ -17,7 +18,7 @@
         <div :class="`i-ri-${socialLink.icon}-line`" />
       </a>
       <a cursor-pointer>
-        <div :class="isDark ? 'i-ri-sun-line' : 'i-ri-moon-line'" @click="isDark = !isDark" />
+        <div :class="isDark ? 'i-ri-sun-line' : 'i-ri-moon-line'" @click="toggleDark" />
       </a>
     </nav>
   </header>

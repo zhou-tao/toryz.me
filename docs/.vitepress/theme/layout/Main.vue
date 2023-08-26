@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { useData } from 'vitepress'
-  import NotFound from './NotFound.vue'
+  import NotFound from '../pages/not-found.vue'
 
   const { page, frontmatter } = useData()
 
@@ -9,20 +9,16 @@
 
 <template>
   <main class="main">
-    <div class="article">
+    <article class="article">
       <NotFound v-if="page.isNotFound" />
       <Content v-else />
       <slot />
-    </div>
+    </article>
   </main>
 </template>
 
 <style scoped>
 .main {
   @apply px-7 py-10 of-x-hidden;
-}
-
-.article {
-  @apply max-w-700px m-auto;
 }
 </style>

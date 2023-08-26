@@ -6,7 +6,7 @@ export default defineConfig({
   // base: '/blog/',
   title: 'Blog',
   description: '个人极简博客。',
-  appearance: 'dark',
+  appearance: false,
   lang: 'zh',
   lastUpdated: true,
   cleanUrls: true,
@@ -14,6 +14,9 @@ export default defineConfig({
     plugins: [
       Unocss() as any
     ]
+  },
+  markdown: {
+    theme: 'vitesse-dark'
   },
   locales: {
     root: {

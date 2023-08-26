@@ -9,20 +9,10 @@ import {
 
 export default defineConfig({
   theme: {
-    colors: {
-      light_bg: '#fff',
-      dark_bg: '#050505',
-      light_text: '#374151',
-      dark_text: '#e5e7eb'
-    },
     height: {
       header: '64px',
       footer: '50px'
     }
-  },
-  shortcuts: {
-    root_bg: 'bg-light_bg dark:bg-dark_bg',
-    root_text: 'text-light_text dark:text-dark_text'
   },
   presets: [
     presetUno(),
@@ -41,6 +31,7 @@ export default defineConfig({
     transformerVariantGroup(),
     transformerDirectives()
   ],
+  blocklist: ['me'],
   safelist: [
     'i-ri-github-line',
     'i-ri-heart-pulse-line'

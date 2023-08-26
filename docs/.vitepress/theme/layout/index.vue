@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="layout dotme">
+  <div class="me layout-me">
     <Header />
     <Main>
       <Footer />
@@ -14,7 +14,7 @@
 </template>
 
 <style scoped>
-.layout {
+.layout-me {
   @apply min-h-100vh;
 }
 </style>
