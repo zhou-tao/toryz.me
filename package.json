@@ -28,7 +28,7 @@
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.1.6",
     "unocss": "^0.55.2",
-    "vitepress": "1.0.0-rc.4",
+    "vitepress": "1.0.0-rc.6",
     "vue": "^3.3.4"
   },
   "simple-git-hooks": {

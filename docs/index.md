@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 # Toryz
 > 这是一条引用句子。。
 
@@ -28,5 +32,5 @@ console.log('Hello World!')
 ```
 
 ```bash
-pnpm add vitepress-theme-dotme -D
+pnpm add vitepress-theme-me -D
 ```

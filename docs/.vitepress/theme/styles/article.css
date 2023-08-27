@@ -14,8 +14,7 @@ html.dark .article {
 
 /* article base css */
 .article {
-  max-width: 700px;
-  margin: auto;
+  color: var(--at);
   font-size: 1rem;
   line-height: 1.75;
 }
@@ -151,7 +150,6 @@ html.dark .article {
   font-weight: 400;
   color: inherit;
   font-size: inherit;
-  font-family: inherit;
   line-height: inherit;
 }
 .article pre:not(.shiki) {
@@ -176,6 +174,9 @@ html.dark .shiki,
 html.dark .shiki span {
   background-color: var(--at-code-bg) !important;
 }
+
+/* code language components */
+
 
 /* blockquote */
 .article blockquote {

@@ -1,23 +1,27 @@
 <script setup lang="ts">
   import { useData } from 'vitepress'
+
   import { isDark, toggleDark } from '../composables/useDark'
 
   const { site } = useData()
 
-  const { socialLinks = [] } = site.value?.themeConfig
+  const { logo, nav = [], socialLinks = [] } = site.value?.themeConfig
+
+  const socialLinkIcons = ['discord', 'facebook', 'github', 'instagram', 'linkedin', 'mastodon', 'slack', 'twitter', 'youtube', 'zhihu', 'bilibili']
 </script>
 
 <template>
   <header class="header">
-    <a href="/">LOGO</a>
+    <a href="/">
+      <img class="logo" :src="logo" alt="logo">
+    </a>
     <nav class="nav">
-      <a href="/posts" title="Blog">Blog</a>
-      <a href="/projects" title="Projects">Projects</a>
-      <a href="/links" title="FriendLinks">FriendLinks</a>
-      <a v-for="(socialLink, index) in socialLinks" :key="index" :href="socialLink.link" :title="socialLink.title">
-        <div :class="`i-ri-${socialLink.icon}-line`" />
+      <a v-for="item in nav" :key="item.link" :href="item.link" :title="item.text">{{ item.text }}</a>
+      <a v-for="(socialLink, index) in socialLinks" :key="index" :href="socialLink.link" :ariaLabel="socialLink.ariaLabel">
+        <div v-if="socialLinkIcons.includes(socialLink.icon)" :class="`i-ri-${socialLink.icon}-line`" />
+        <div v-else class="svg-icon" v-html="socialLink.icon.svg" />
       </a>
-      <a cursor-pointer>
+      <a cursor="pointer">
         <div :class="isDark ? 'i-ri-sun-line' : 'i-ri-moon-line'" @click="toggleDark" />
       </a>
     </nav>
@@ -29,14 +33,22 @@
   @apply flex justify-between p8;
 }
 .header a {
-  @apply op-60 transition-200 ease hover:(op-100);
+  @apply op-60 hover:op-100 transition-200 ease;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
 }
 
 .nav {
   @apply grid grid-flow-col gap-5;
 }
 
-/* .nav a {
-  @apply gap-5;
-} */
+.svg-icon {
+  color: currentColor;
+  font-size: 1.23rem;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
 </style>
