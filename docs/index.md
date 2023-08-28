@@ -22,15 +22,23 @@ layout: home
 #### 四级标题
 ##### 五级标题
 
-你好，我是toryz。这是我的博客！你好，我是`toryz`。
-这是我的博客！你好，我是toryz。这是我的博客！你好，我是toryz。这是我的博客！你好，我是toryz。这是我的博客！
-
-
-
 ```js
 console.log('Hello World!')
+console.log('Hello World!')
+console.log('Hello World!')
 ```
+::: code-group
 
-```bash
+```bash [pnpm]
 pnpm add vitepress-theme-me -D
 ```
+
+```bash [yarn]
+yarn add vitepress-theme-me -D
+```
+
+```bash [npm]
+npm install vitepress-theme-me -D
+```
+
+:::

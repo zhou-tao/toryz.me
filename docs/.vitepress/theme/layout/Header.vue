@@ -37,8 +37,7 @@
 }
 
 .logo {
-  width: 2rem;
-  height: 2rem;
+  @apply w10 h10 rounded-full;
 }
 
 .nav {
