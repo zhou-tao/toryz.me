@@ -54,6 +54,7 @@ html.dark .vp-code-group {
   white-space: nowrap;
   cursor: pointer;
   transition: color 0.25s;
+  user-select: none;
 }
 
 .vp-code-group .tabs label::after {

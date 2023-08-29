@@ -3,6 +3,7 @@ import {
   presetUno,
   presetAttributify,
   presetIcons,
+  presetWebFonts,
   transformerVariantGroup,
   transformerDirectives
 } from 'unocss'
@@ -20,6 +21,12 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetAttributify(),
+    presetWebFonts({
+      fonts: {
+        sans: 'Inter:400,600,800',
+        mono: 'DM Mono:400,600'
+      }
+    }),
     presetIcons({
       warn: true,
       extraProperties: {
