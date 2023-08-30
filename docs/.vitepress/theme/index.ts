@@ -8,12 +8,15 @@ import Layout from './layout/index.vue'
 
 export default {
   Layout,
-  enhanceApp({ app, router, siteData }) {
-    router.onBeforeRouteChange = (to) => {
-      NProgress.start()
-    }
-    router.onBeforePageLoad = (to) => {
-      NProgress.done()
+  async enhanceApp({ app, router, siteData }) {
+    if (!import.meta.env.SSR) {
+      const NProgress = await import('nprogress')
+      router.onBeforeRouteChange = (to) => {
+        NProgress.start()
+      }
+      router.onBeforePageLoad = (to) => {
+        NProgress.done()
+      }
     }
   }
 }

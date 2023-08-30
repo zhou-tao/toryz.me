@@ -1,13 +1,23 @@
 <script setup lang="ts">
+  import { onBeforeMount, watch, ref } from 'vue'
   import { useData } from 'vitepress'
-
-  import { isDark, toggleDark } from '../composables/useDark'
 
   const { site } = useData()
 
   const { logo, nav = [], socialLinks = [] } = site.value?.themeConfig
 
   const socialLinkIcons = ['discord', 'facebook', 'github', 'instagram', 'linkedin', 'mastodon', 'slack', 'twitter', 'youtube', 'zhihu', 'bilibili']
+
+  const themeIcon = ref('i-ri-sun-line')
+  let toggleDarkFunc
+
+  onBeforeMount(async () => {
+    const { isDark, toggleDark } = await import('../composables/useDark')
+    toggleDarkFunc = toggleDark
+    watch(isDark, (v) => {
+      themeIcon.value = v ? 'i-ri-sun-line' : 'i-ri-moon-line'
+    })
+  })
 </script>
 
 <template>
@@ -22,7 +32,7 @@
         <div v-else class="svg-icon" v-html="socialLink.icon.svg" />
       </a>
       <a cursor="pointer">
-        <div :class="isDark ? 'i-ri-sun-line' : 'i-ri-moon-line'" @click="toggleDark" />
+        <div :class="themeIcon" @click="toggleDarkFunc" />
       </a>
     </nav>
   </header>
