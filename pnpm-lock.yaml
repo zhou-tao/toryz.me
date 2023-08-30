@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  nprogress:
+    specifier: ^0.2.0
+    version: 0.2.0
+
 devDependencies:
   '@iconify-json/ri':
     specifier: ^1.1.12
@@ -37,7 +42,7 @@ devDependencies:
     version: 0.55.2(postcss@8.4.28)(vite@4.4.9)
   vitepress:
     specifier: 1.0.0-rc.6
-    version: 1.0.0-rc.6(@algolia/client-search@4.19.1)(@types/node@20.5.1)(search-insights@2.7.0)
+    version: 1.0.0-rc.6(@algolia/client-search@4.19.1)(@types/node@20.5.1)(nprogress@0.2.0)(search-insights@2.7.0)
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -1203,7 +1208,7 @@ packages:
       - vue
     dev: true
 
-  /@vueuse/integrations@10.4.1(focus-trap@7.5.2)(vue@3.3.4):
+  /@vueuse/integrations@10.4.1(focus-trap@7.5.2)(nprogress@0.2.0)(vue@3.3.4):
     resolution: {integrity: sha512-uRBPyG5Lxoh1A/J+boiioPT3ELEAPEo4t8W6Mr4yTKIQBeW/FcbsotZNPr4k9uz+3QEksMmflWloS9wCnypM7g==}
     peerDependencies:
       async-validator: '*'
@@ -1247,6 +1252,7 @@ packages:
       '@vueuse/core': 10.4.1(vue@3.3.4)
       '@vueuse/shared': 10.4.1(vue@3.3.4)
       focus-trap: 7.5.2
+      nprogress: 0.2.0
       vue-demi: 0.14.5(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -2907,6 +2913,9 @@ packages:
       path-key: 4.0.0
     dev: true
 
+  /nprogress@0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+
   /nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
     dependencies:
@@ -3656,7 +3665,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-rc.6(@algolia/client-search@4.19.1)(@types/node@20.5.1)(search-insights@2.7.0):
+  /vitepress@1.0.0-rc.6(@algolia/client-search@4.19.1)(@types/node@20.5.1)(nprogress@0.2.0)(search-insights@2.7.0):
     resolution: {integrity: sha512-BP+4j75ukrp4L2iV4XMjWguKXp7HvzCzdxPuKtz8SO84lOn6r3jQ8CI78mtaV0LV4Pyqs9bG0ba/H0SUT6EJog==}
     hasBin: true
     dependencies:
@@ -3665,7 +3674,7 @@ packages:
       '@vitejs/plugin-vue': 4.3.3(vite@5.0.0-beta.0)(vue@3.3.4)
       '@vue/devtools-api': 6.5.0
       '@vueuse/core': 10.4.1(vue@3.3.4)
-      '@vueuse/integrations': 10.4.1(focus-trap@7.5.2)(vue@3.3.4)
+      '@vueuse/integrations': 10.4.1(focus-trap@7.5.2)(nprogress@0.2.0)(vue@3.3.4)
       focus-trap: 7.5.2
       mark.js: 8.11.1
       minisearch: 6.1.0

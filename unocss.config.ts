@@ -9,6 +9,11 @@ import {
 } from 'unocss'
 
 export default defineConfig({
+  rules: [
+    [/^slide-enter-(\d+)$/, ([_, n]) => ({
+      '--enter-stage': n
+    })]
+  ],
   theme: {
     maxWidth: {
       main: '750px'

@@ -72,7 +72,7 @@ html.dark .article {
 /* a */
 .article a {
   color: var(--at-deeper);
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   border-bottom: 1px dashed rgba(125, 125, 125, 0.5);
   transition: border 0.3s ease-in-out;
@@ -197,7 +197,7 @@ html.dark .shiki span {
   /*rtl:ignore*/
   direction: ltr;
   position: absolute;
-  top: 18px;
+  top: 12px;
   /*rtl:ignore*/
   right: 12px;
   z-index: 3;
@@ -206,7 +206,7 @@ html.dark .shiki span {
   width: 32px;
   height: 32px;
   background-color: var(--at-copy-bg);
-  opacity: 0;
+  opacity: 0 !important;
   cursor: pointer;
   background-image: var(--at-icon-copy);
   background-position: 50%;
@@ -220,7 +220,7 @@ html.dark .shiki span {
 
 .article [class*='language-']:hover > button.copy,
 .article [class*='language-'] > button.copy:focus {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .article [class*='language-'] > button.copy:hover,
@@ -253,7 +253,7 @@ html.dark .shiki span {
 
 .article [class*='language-']:hover > button.copy + span.lang,
 .article [class*='language-'] > button.copy:focus + span.lang {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 /* blockquote */

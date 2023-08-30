@@ -38,7 +38,7 @@ html.dark .vp-code-group {
 
 .vp-code-group .tabs input {
   position: fixed;
-  opacity: 0;
+  opacity: 0 !important;
   pointer-events: none;
 }
 

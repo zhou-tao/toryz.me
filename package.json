@@ -17,6 +17,9 @@
     "typecheck": "tsc --noEmit",
     "postinstall": "simple-git-hooks"
   },
+  "dependencies": {
+    "nprogress": "^0.2.0"
+  },
   "devDependencies": {
     "@iconify-json/ri": "^1.1.12",
     "@toryz/eslint-config": "^0.1.4",

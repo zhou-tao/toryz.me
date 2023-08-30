@@ -3,7 +3,7 @@
   import NotFound from '../pages/not-found.vue'
   import List from '../pages/list.vue'
   import Card from '../pages/card.vue'
-  import Pager from './Pager.vue'
+  import Pager from '../components/Pager.vue'
 
   const { page, frontmatter } = useData()
 </script>
@@ -14,7 +14,7 @@
       <NotFound v-if="page.isNotFound" />
       <List v-else-if="frontmatter.layout === 'list'" />
       <Card v-else-if="frontmatter.layout === 'card'" />
-      <Content v-else />
+      <Content v-else class="slide-enter-content" />
       <Pager v-if="frontmatter.layout !== 'home'" />
     </article>
     <slot />

@@ -7,15 +7,29 @@
 </script>
 
 <template>
-  <h1>{{ frontmatter.title || 'List Page' }}</h1>
+  <h1 class="mb-12!">
+    {{ frontmatter.title || 'List Page' }}
+  </h1>
   {{ sidebar.length }}
   <ul>
-    <li v-for="item in sidebar.default" :key="item.link">
-      {{ item.text }}
-    </li>
+    <div
+      v-for="(item, idx) in sidebar.default" :key="item.link" class="slide-enter"
+      :style="{
+        '--enter-stage': idx,
+        '--enter-step': '60ms',
+      }"
+    >
+      <a :href="item.link" class="font-normal op-60 hover:op-100 transition-opacity! ease transition-300">
+        <li class="list-none! text-lg leading-1.2em my-5 tracking-wide">
+          {{ item.text }}
+        </li>
+      </a>
+    </div>
   </ul>
 </template>
 
 <style scoped>
-
+ul {
+  list-style: none;
+}
 </style>

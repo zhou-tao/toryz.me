@@ -5,7 +5,9 @@
 </script>
 
 <template>
-  <h1>{{ frontmatter.title || 'Card Page' }}</h1>
+  <h1 class="mb-12!">
+    {{ frontmatter.title || 'Card Page' }}
+  </h1>
   <div>
     card view
   </div>
