@@ -1,12 +1,12 @@
 {
-  "name": "blog",
+  "name": "toryz.me",
   "type": "module",
   "private": true,
-  "description": "my blog",
+  "description": "my personal website",
   "author": "toryz <zhoutao_233@163.com>",
   "license": "MIT",
   "keywords": [
-    "toryz blog"
+    "website"
   ],
   "scripts": {
     "dev": "vitepress dev docs",
