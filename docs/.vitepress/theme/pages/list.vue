@@ -1,19 +1,20 @@
 <script setup lang="ts">
   import { useData } from 'vitepress'
+  import Empty from '../components/Empty.vue'
 
-  const { frontmatter, site } = useData()
+  const { frontmatter } = useData()
 
-  const { sidebar = [] } = site.value?.themeConfig
+  const { items = [], title = 'List' } = frontmatter.value
 </script>
 
 <template>
   <h1 class="page-title">
-    {{ frontmatter.title || 'List Page' }}
+    {{ title }}
   </h1>
-  {{ sidebar.length }}
-  <ul>
+  <Empty v-if="!items.length" />
+  <ul v-else>
     <div
-      v-for="(item, idx) in sidebar.default" :key="item.link" class="slide-enter"
+      v-for="(item, idx) in items" :key="item.link" class="slide-enter"
       :style="{
         '--enter-stage': idx,
         '--enter-step': '60ms',

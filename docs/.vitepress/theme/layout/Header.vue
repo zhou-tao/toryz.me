@@ -4,7 +4,7 @@
 
   const { site } = useData()
 
-  const { logo, nav = [], socialLinks = [] } = site.value?.themeConfig
+  const { logo, nav = [] } = site.value?.themeConfig
 
   const socialLinkIcons = ['discord', 'facebook', 'github', 'instagram', 'linkedin', 'mastodon', 'slack', 'twitter', 'youtube', 'zhihu', 'bilibili']
 
@@ -26,10 +26,14 @@
       <img class="logo" :src="logo" alt="logo">
     </a>
     <nav class="nav">
-      <a v-for="item in nav" :key="item.link" :href="item.link" :title="item.text">{{ item.text }}</a>
-      <a v-for="(socialLink, index) in socialLinks" :key="index" :href="socialLink.link" :ariaLabel="socialLink.ariaLabel">
-        <div v-if="socialLinkIcons.includes(socialLink.icon)" :class="`i-ri-${socialLink.icon}-line`" />
-        <div v-else class="svg-icon" v-html="socialLink.icon.svg" />
+      <a v-for="n in nav" :key="n.link" :href="n.link" :title="n.text">
+        <template v-if="n.icon">
+          <div v-if="socialLinkIcons.includes(n.icon)" :class="`i-ri-${n.icon}-line`" />
+          <div v-else class="svg-icon" v-html="n.icon.svg" />
+        </template>
+        <template v-else>
+          {{ n.text }}
+        </template>
       </a>
       <a cursor="pointer">
         <div :class="themeIcon" @click="toggleDarkFunc" />
