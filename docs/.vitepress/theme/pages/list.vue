@@ -20,7 +20,7 @@
       }"
     >
       <a :href="item.link" class="item">
-        <li class="list-none! text-lg leading-1.2em my-5 tracking-wide">
+        <li class="list-none! text-lg leading-1.2em my-4.5 tracking-wide">
           {{ item.text }}
         </li>
       </a>

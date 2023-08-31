@@ -1,12 +1,15 @@
 <script setup lang="ts">
-  // import { useRouter } from 'vitepress'
+  import { computed } from 'vue'
+  import { useRoute } from 'vitepress'
 
-  // const router = useRouter()
+  const route = useRoute()
+
+  const prevPath = computed(() => route.path.split('/').slice(0, -1).join('/') || '/')
 </script>
 
 <template>
   <div class="pager" m="t8 b8">
     <span font="mono" op50>&gt; </span>
-    <a href="/" font="mono" op="50 hover:75">cd ..</a>
+    <a :href="prevPath" font="mono" op="50 hover:75">cd ..</a>
   </div>
 </template>
