@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <h1 class="mb-12!">
+  <h1 class="page-title">
     {{ frontmatter.title || 'List Page' }}
   </h1>
   {{ sidebar.length }}
@@ -19,7 +19,7 @@
         '--enter-step': '60ms',
       }"
     >
-      <a :href="item.link" class="font-normal op-60 hover:op-100 transition-opacity! ease transition-300">
+      <a :href="item.link" class="item">
         <li class="list-none! text-lg leading-1.2em my-5 tracking-wide">
           {{ item.text }}
         </li>
@@ -27,9 +27,3 @@
     </div>
   </ul>
 </template>
-
-<style scoped>
-ul {
-  list-style: none;
-}
-</style>

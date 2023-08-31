@@ -319,3 +319,11 @@ html.dark .shiki span {
   transform: scale(1.05);
   margin: 2.6em 0;
 }
+
+.article .page-title {
+  margin-bottom: 52px;
+}
+
+.article a.item {
+  @apply font-normal op-60 hover:op-100 transition-opacity ease transition-300;
+}

@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <h1 class="mb-12!">
+  <h1 class="page-title">
     {{ frontmatter.title || 'Card Page' }}
   </h1>
   <div>
