@@ -1,21 +1,20 @@
 <script setup lang="ts">
   import { onBeforeMount, watch, ref } from 'vue'
   import { useData } from 'vitepress'
+  import Icon from '../components/Icon.vue'
 
   const { site } = useData()
 
   const { logo, nav = [] } = site.value?.themeConfig
 
-  const socialLinkIcons = ['discord', 'facebook', 'github', 'instagram', 'linkedin', 'mastodon', 'slack', 'twitter', 'youtube', 'zhihu', 'bilibili']
-
-  const themeIcon = ref('i-ri-sun-line')
+  const themeIcon = ref<'sun' | 'moon'>('sun')
   let toggleDarkFunc
 
   onBeforeMount(async () => {
     const { isDark, toggleDark } = await import('../composables/useDark')
     toggleDarkFunc = toggleDark
     watch(isDark, (v) => {
-      themeIcon.value = v ? 'i-ri-sun-line' : 'i-ri-moon-line'
+      themeIcon.value = v ? 'sun' : 'moon'
     })
   })
 </script>
@@ -27,16 +26,13 @@
     </a>
     <nav class="nav">
       <a v-for="n in nav" :key="n.link" :href="n.link" :title="n.text">
-        <template v-if="n.icon">
-          <div v-if="socialLinkIcons.includes(n.icon)" :class="`i-ri-${n.icon}-line`" />
-          <div v-else class="svg-icon" v-html="n.icon.svg" />
-        </template>
+        <Icon v-if="n.icon" :icon="n.icon" />
         <template v-else>
           {{ n.text }}
         </template>
       </a>
-      <a cursor="pointer">
-        <div :class="themeIcon" @click="toggleDarkFunc" />
+      <a cursor="pointer" @click="toggleDarkFunc">
+        <Icon :icon="{ name: themeIcon }" />
       </a>
     </nav>
   </header>
@@ -56,12 +52,5 @@
 
 .nav {
   @apply grid grid-flow-col gap-5;
-}
-
-.svg-icon {
-  color: currentColor;
-  font-size: 1.23rem;
-  display: inline-block;
-  vertical-align: text-bottom;
 }
 </style>

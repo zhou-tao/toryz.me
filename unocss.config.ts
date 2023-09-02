@@ -48,6 +48,8 @@ export default defineConfig({
   ],
   blocklist: ['me'],
   safelist: [
+    'i-ri-sun-line',
+    'i-ri-moon-line',
     'i-ri-github-line',
     'i-ri-discord-line',
     'i-ri-facebook-line',

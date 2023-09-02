@@ -4,34 +4,45 @@ layout: List
 items:
   - text: 关于我
     link: /posts/about-me
+    time: 2023/09/02
 
   - text: 表达式转换
     link: /posts/exp-conversion
+    time: 2023/07/24
 
   - text: 搭建博客
     link: /posts/blog
+    time: 2023/03/06
 
   - text: nvm
     link: /posts/nvm
+    time: 2023/02/04
 
   - text: node-sass安装
     link: /posts/node-sass
+    time: 2022/12/12
 
   - text: 搭建NPM私库
     link: /posts/npm-private-repo
+    time: 2022/09/02
 
   - text: 链接文件系统
     link: /posts/linked-file-system
+    time: 2022/08/01
 
   - text: 冒泡排序及优化
     link: /posts/bubble-sort
+    time: 2021/11/04
 
   - text: 链表排序
     link: /posts/linked-list-sort
+    time: 2021/06/06
 
   - text: 构造树
     link: /posts/create-tree
+    time: 2021/05/01
 
   - text: Markdown简历
     link: /posts/resume
+    time: 2021/04/09
 ---
