@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  import BackTop from '../components/BackTop.vue'
   import Header from './Header.vue'
   import Main from './Main.vue'
   import Footer from './Footer.vue'
@@ -10,6 +11,7 @@
     <Main>
       <Footer />
     </Main>
+    <BackTop />
   </div>
 </template>
 
