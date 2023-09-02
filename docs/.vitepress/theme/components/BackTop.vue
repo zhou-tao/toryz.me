@@ -20,7 +20,7 @@
 </script>
 
 <template>
-  <div :style="{ opacity: percent / 40 }" class="back-top" @click="scrollTop">
+  <div v-show="percent" :style="{ opacity: percent / 40 }" class="back-top" @click="scrollTop">
     <div i-ri-arrow-up-s-line size="1.8rem" />
     <div w10 text-center font-mono>
       {{ percent }}%
@@ -30,7 +30,7 @@
 
 <style scoped>
 .back-top {
-  @apply font-normal transition-opacity ease transition-300;
+  @apply font-normal hover:op100! transition-opacity ease transition-300;
   @apply fixed z-10 right-8 bottom-8 cursor-pointer flex flex-col items-center;
 }
 </style>
