@@ -18,6 +18,7 @@
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
+    "@waline/client": "^2.15.7",
     "dayjs": "^1.11.9",
     "nprogress": "^0.2.0"
   },

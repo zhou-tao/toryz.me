@@ -4,6 +4,7 @@
   import NotFound from '../pages/not-found.vue'
   import List from '../pages/list.vue'
   import Card from '../pages/card.vue'
+  import Comment from '../components/Comment.vue'
   import Pager from '../components/Pager.vue'
 
   const PageLayout = { List, Card }
@@ -24,6 +25,7 @@
       </template>
       <Content v-else class="slide-enter-content" />
       <Pager v-if="!hidePager" />
+      <Comment />
     </article>
     <slot />
   </main>

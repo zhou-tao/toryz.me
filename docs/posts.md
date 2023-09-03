@@ -2,17 +2,13 @@
 title: Blog
 layout: List
 items:
-  - text: 关于我
-    link: /posts/about-me
-    time: 2023/09/02
+  - text: 搭建博客
+    link: /posts/blog
+    time: 2023/08/06
 
   - text: 表达式转换
     link: /posts/exp-conversion
     time: 2023/07/24
-
-  - text: 搭建博客
-    link: /posts/blog
-    time: 2023/03/06
 
   - text: nvm
     link: /posts/nvm

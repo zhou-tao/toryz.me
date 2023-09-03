@@ -1,9 +1,8 @@
-import { defineConfig } from 'vitepress'
+import { defineConfigWithTheme } from 'vitepress'
 import Unocss from 'unocss/vite'
 
-export default defineConfig({
-  // base: '/blog/',
-  title: 'Toryz.me',
+export default defineConfigWithTheme({
+  title: 'toryz.me',
   description: '个人站点',
   appearance: false,
   lang: 'zh',
@@ -11,21 +10,14 @@ export default defineConfig({
   cleanUrls: true,
   vite: {
     plugins: [
-      Unocss() as any
+      Unocss()
     ]
   },
   markdown: {
-    // theme: {
-    //   light: 'vitesse-light',
-    //   dark: 'vitesse-dark'
-    // }
     theme: 'vitesse-dark'
   },
   head: [
-    [
-      'link',
-      { rel: 'icon', href: '/logo.svg' }
-    ]
+    ['link', { rel: 'icon', href: '/logo.svg' }]
   ],
   themeConfig: {
     logo: '/logo.svg',
@@ -47,7 +39,13 @@ export default defineConfig({
           name: 'github'
         }
       }
-
-    ] as any
+    ],
+    waline: {
+      serverURL: 'https://toryz-me.netlify.app',
+      requiredMeta: ['nick', 'mail'],
+      wordLimit: 200,
+      pageSize: 5,
+      dark: 'html.dark'
+    }
   }
 })

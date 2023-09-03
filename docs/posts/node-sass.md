@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # node-sass 安装问题
 
 > 前言：windows系统上，如果遇到老项目中需要安装node-sass包，经常安装报错，而且网上查到的解决办法基本没什么有效的！所以本篇记录下node-sass 安装报错解决办法。
