@@ -4,7 +4,7 @@ layout: Card
 items:
   - text: vue-power-admin
     link: https://github.com/zhou-tao/vue-power-admin
-    description: admin template for vue3 admin template for vue3 admin template for vue3 admin template for vue3 admin template for vue3
+    description: admin template for vue3 admin template for vue3
     icon: 
       src: /vue.svg
 

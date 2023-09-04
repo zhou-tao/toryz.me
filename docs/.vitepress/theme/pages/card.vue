@@ -1,11 +1,18 @@
 <script setup lang="ts">
   import { useData } from 'vitepress'
+  import { onMounted, ref } from 'vue'
   import Empty from '../components/Empty.vue'
   import Icon from '../components/Icon.vue'
 
   const { frontmatter } = useData()
 
   const { items = [], title = 'Card' } = frontmatter.value
+
+  const isMobile = ref(false)
+
+  onMounted(() => {
+    isMobile.value = document.documentElement.clientWidth < 768
+  })
 </script>
 
 <template>
@@ -19,7 +26,7 @@
       :key="item.link"
       class="slide-enter"
       :style="{
-        '--enter-stage': Math.ceil((idx + 1) / 2),
+        '--enter-stage': isMobile ? idx : Math.ceil((idx + 1) / 2),
         '--enter-step': '90ms',
       }"
     >
@@ -38,7 +45,7 @@
 
 <style scoped>
 .card {
-  @apply grid grid-cols-2 gap-y6;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-y6;
 }
 
 .item:hover {
