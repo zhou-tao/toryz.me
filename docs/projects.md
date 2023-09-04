@@ -4,19 +4,19 @@ layout: Card
 items:
   - text: vue-power-admin
     link: https://github.com/zhou-tao/vue-power-admin
-    description: admin template for vue3 admin template for vue3
+    description: A powerful admin based on Vue3 + Typescript
     icon: 
       src: /vue.svg
 
   - text: vitepress-theme-me
     link: https://github.com/zhou-tao/vitepress-theme-me
-    description: vitepress theme for personal website
+    description: Vitepress theme for personal website
     icon: 
       src: /markdown.svg
 
   - text: vite-plugin-env-parser
     link: https://github.com/zhou-tao/vite-plugin-env-parser
-    description: vite plugin for env type parse
+    description: Vite plugin for env type parser
     icon: 
       src: /vite.svg
 ---

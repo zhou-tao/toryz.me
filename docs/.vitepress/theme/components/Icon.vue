@@ -46,9 +46,9 @@
 <template>
   <div v-if="svgCode" class="svg-icon" :style="{ fontSize: iconSize }" v-html="svgCode" />
   <div v-else-if="riName" :class="`i-ri-${riName}-line`" :style="{ width: iconSize, height: iconSize }" />
-  <div v-else>
-    <img :src="iconPath" :width="size" :height="size">
-  </div>
+  <span v-else>
+    <img :src="iconPath" :style="{ width: iconSize, height: iconSize }">
+  </span>
 </template>
 
 <style scoped>
@@ -59,6 +59,7 @@
 }
 
 img {
+  display: inline;
   object-fit: cover;
   object-position: center;
 }

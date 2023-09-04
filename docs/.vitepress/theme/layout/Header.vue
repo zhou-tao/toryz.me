@@ -47,7 +47,7 @@
 }
 
 .logo {
-  @apply w10 h10 rounded-full;
+  @apply w10 h10;
 }
 
 .nav {

@@ -2,43 +2,27 @@
 layout: home
 ---
 
+<script setup lang="ts">
+import Icon from '.vitepress/theme/components/Icon.vue'
+</script>
+
 # Toryz
-> 这是一条引用句子。。
 
-您好，我是`toryz`。这是我的个人站点！此页暂为测试内容阿巴阿巴！正在开发中...
+Hello, 我是 **Toryz**。一个向往开源，游走在 **「前端」** 的码农。
 
-## 二级标题
+目前定居于 **「知名卷城」** 杭州。
 
-- ESM - [ECMAScript modules]()
-- CJS - [CommonJS]()
+会利用空闲时间进行一些自认为有趣的代码实验探索。
+点击[**「项目」**]('./projects')可查看完整列表。
 
-### 三级标题
+生活中喜欢但不擅长的活动有 **「跑步」** **「游戏」** **「篮球」** **「羽毛球」**。
 
-1. First item
-2. Second item
-3. Third item
-4. Fourth item
+<br>
+可以在这里关注我的动态
 
-#### 四级标题
-##### 五级标题
+<a href="https://github.com/zhou-tao"><div i-ri-github-fill /> Github</a>&nbsp;&nbsp;
+<a href="https://space.bilibili.com/363188441"><div i-ri-bilibili-fill /> 哔哩哔哩</a>&nbsp;&nbsp;
+<a href="https://juejin.cn/user/3532106417578552"><Icon :icon="{ src: '/juejin.svg' }" size="1.3rem" /> 掘金</a>&nbsp;&nbsp;
+<a href="https://www.zhihu.com/people/guo-fu-di-yi-gua-pi"><div i-ri-zhihu-line /> 知乎</a>
 
-```js
-console.log('Hello World!')
-console.log('Hello World!')
-console.log('Hello World!')
-```
-::: code-group
-
-```bash [pnpm]
-pnpm add vitepress-theme-me -D
-```
-
-```bash [yarn]
-yarn add vitepress-theme-me -D
-```
-
-```bash [npm]
-npm install vitepress-theme-me -D
-```
-
-:::
+如果您欣赏我的作品，也可以考虑赞助我 <a href="https://afdian.net/a/toryz/plan"><Icon :icon="{ src: '/lightning.svg' }" size="1.3rem" />爱发电</a> 感谢。

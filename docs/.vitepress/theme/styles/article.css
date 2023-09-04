@@ -27,6 +27,10 @@ html.dark .article {
   line-height: 1.75;
 }
 
+.article p {
+  margin-bottom: 1.25em;
+}
+
 /* h1-h5 */
 .article h1 {
   color: var(--at-deeper);
