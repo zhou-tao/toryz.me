@@ -19,6 +19,7 @@ export default defineConfigWithTheme({
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }]
   ],
+  ignoreDeadLinks: true,
   themeConfig: {
     logo: '/logo.svg',
     nav: [
