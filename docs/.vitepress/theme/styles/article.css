@@ -88,6 +88,15 @@ html.dark .article {
   color: inherit;
 }
 
+.article a,
+.header a {
+   /* 去除移动端点击蓝色背景 */
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+
 /* anchor */
 .article .header-anchor {
   float: left;
@@ -329,5 +338,5 @@ html.dark .shiki span {
 }
 
 .article a.item {
-  @apply font-normal op-60 hover:op-100 transition-opacity ease transition-300;
+  @apply font-normal op-60 hover:op-100 active:op-100 transition-opacity ease transition-300;
 }

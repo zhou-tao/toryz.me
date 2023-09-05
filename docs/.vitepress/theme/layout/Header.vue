@@ -53,4 +53,8 @@
 .nav {
   @apply grid grid-flow-col gap-5;
 }
+
+.nav a {
+  align-self: center;
+}
 </style>
