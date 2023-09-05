@@ -10,7 +10,7 @@
     "website"
   ],
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --host",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "build": "vitepress build docs",

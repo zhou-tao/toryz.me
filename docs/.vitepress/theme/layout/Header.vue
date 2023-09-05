@@ -51,7 +51,7 @@
 }
 
 .nav {
-  @apply grid grid-flow-col gap-5;
+  @apply grid grid-flow-col gap-3 md:gap-5;
 }
 
 .nav a {
