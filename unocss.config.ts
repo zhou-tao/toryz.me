@@ -60,7 +60,6 @@ export default defineConfig({
     'i-ri-twitter-line',
     'i-ri-youtube-line',
     'i-ri-zhihu-line',
-    'i-ri-bilibili-line',
-    'i-ri-heart-pulse-line'
+    'i-ri-bilibili-line'
   ]
 })
