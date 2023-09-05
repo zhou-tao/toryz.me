@@ -11,7 +11,7 @@
     return useRoute().path.replace(/(\/)?(index)?(\.html)?$/, '')
   })
   const shouldShowWaline = computed(() => {
-    return serverURL && data.page.value.frontmatter.comments
+    return serverURL && data.page.value.frontmatter.comment
   })
 
   const walineProps = Object.assign({

@@ -1,5 +1,5 @@
 ---
-comments: true
+comment: true
 ---
 
 # node-sass 安装问题

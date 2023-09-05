@@ -1,5 +1,5 @@
 ---
-comments: true
+comment: true
 ---
 
 # 冒泡排序及优化策略

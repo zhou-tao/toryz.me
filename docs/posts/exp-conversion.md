@@ -1,5 +1,5 @@
 ---
-comments: true
+comment: true
 ---
 
 # 表达式转换 <Badge text="进阶" />

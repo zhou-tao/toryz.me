@@ -41,7 +41,7 @@ export default defineConfigWithTheme({
       }
     ],
     waline: {
-      serverURL: 'https://toryz-me.netlify.app',
+      serverURL: 'https://toryz-me.netlify.app/.netlify/functions/comment',
       requiredMeta: ['nick', 'mail'],
       wordLimit: 200,
       pageSize: 5,

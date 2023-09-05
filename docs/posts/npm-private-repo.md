@@ -1,5 +1,5 @@
 ---
-comments: true
+comment: true
 ---
 
 # NPM 私有仓库搭建

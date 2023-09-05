@@ -1,5 +1,5 @@
 ---
-comments: true
+comment: true
 ---
 
 # 链接文件系统：inode、硬链接和软连接 <Badge text="转" />

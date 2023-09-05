@@ -1,5 +1,5 @@
 ---
-comments: true
+comment: true
 ---
 
 # 使用VuePress搭建博客站

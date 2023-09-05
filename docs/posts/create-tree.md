@@ -1,5 +1,5 @@
 ---
-comments: true
+comment: true
 ---
 
 # 扁平数据构造树形结构

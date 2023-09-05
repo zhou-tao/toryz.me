@@ -1,5 +1,5 @@
 ---
-comments: true
+comment: true
 ---
 
 # Node版本管理器 nvm

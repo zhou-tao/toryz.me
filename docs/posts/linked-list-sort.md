@@ -1,5 +1,5 @@
 ---
-comments: true
+comment: true
 ---
 
 # 链表排序 <Badge text="待优化" />

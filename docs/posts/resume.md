@@ -1,5 +1,5 @@
 ---
-comments: true
+comment: true
 ---
 
 # 使用Markdown编写简历
