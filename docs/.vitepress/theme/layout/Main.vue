@@ -25,8 +25,8 @@
       </template>
       <Content v-else class="slide-enter-content" />
       <Pager v-if="!hidePager" />
-      <Comment />
     </article>
+    <Comment />
     <slot />
   </main>
 </template>

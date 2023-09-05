@@ -22,3 +22,18 @@
 <template>
   <Waline v-if="shouldShowWaline" v-bind="walineProps" :path="path" mt12 />
 </template>
+
+<style>
+.wl-content .vemoji,
+.wl-content .wl-emoji {
+  width: 1.25em;
+  margin: 0 0.2em -0.25em;
+}
+
+.wl-card .wl-delete,
+.wl-card .wl-like,
+.wl-card .wl-reply,
+.wl-card .wl-edit {
+  margin: 0 6px;
+}
+</style>
