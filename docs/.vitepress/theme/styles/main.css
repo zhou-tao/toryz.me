@@ -95,3 +95,22 @@ html {
   .slide-enter-content div > *:nth-child(19) { --enter-stage: 19 !important; }
   .slide-enter-content div > *:nth-child(20) { --enter-stage: 20 !important; }
 }
+
+/* theme toggle transition */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+.dark::view-transition-old(root) {
+  z-index: 9999;
+}
+.dark::view-transition-new(root) {
+  z-index: 1;
+}
