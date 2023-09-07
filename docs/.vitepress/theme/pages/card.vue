@@ -27,7 +27,7 @@
       class="slide-enter"
       :style="{
         '--enter-stage': isMobile ? idx : Math.ceil((idx + 1) / 2),
-        '--enter-step': '90ms',
+        '--enter-step': '240ms',
       }"
     >
       <a :href="item.link" class="item inline-block border-none! rounded">

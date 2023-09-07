@@ -24,10 +24,10 @@
         <component :is="Layout" :key="route.path" />
       </template>
       <Content v-else class="slide-enter-content" />
-      <Pager v-if="!hidePager" />
+      <Pager v-if="!hidePager" :key="route.path" />
     </article>
     <Comment />
-    <slot />
+    <slot :key="route.path" />
   </main>
 </template>
 
