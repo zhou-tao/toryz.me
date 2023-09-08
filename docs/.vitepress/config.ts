@@ -1,5 +1,4 @@
 import { defineConfigWithTheme } from 'vitepress'
-import Unocss from 'unocss/vite'
 
 export default defineConfigWithTheme({
   title: 'toryz.me',
@@ -8,11 +7,6 @@ export default defineConfigWithTheme({
   lang: 'zh',
   lastUpdated: true,
   cleanUrls: true,
-  vite: {
-    plugins: [
-      Unocss()
-    ]
-  },
   markdown: {
     theme: 'vitesse-dark'
   },
