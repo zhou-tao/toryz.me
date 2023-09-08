@@ -8,7 +8,8 @@ export default defineConfig({
     SearchPlugin({
       placeholder: 'Search Posts',
       buttonLabel: 'Search',
-      previewLength: 10
+      previewLength: 10,
+      tokenize: 'full'
     })
   ],
   server: {
