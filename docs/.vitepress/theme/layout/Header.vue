@@ -2,6 +2,7 @@
   import { onBeforeMount, watch, ref } from 'vue'
   import { useData } from 'vitepress'
   import Icon from '../components/Icon.vue'
+  import Search from '../components/Search.vue'
 
   const { site } = useData()
 
@@ -21,10 +22,13 @@
 
 <template>
   <header class="header">
-    <a href="/">
-      <img class="logo" :src="logo" alt="logo">
-    </a>
+    <div class="flex items-center">
+      <a href="/">
+        <img class="logo" :src="logo" alt="logo">
+      </a>
+    </div>
     <nav class="nav">
+      <Search />
       <a v-for="n in nav" :key="n.link" :href="n.link" :title="n.text">
         <Icon v-if="n.icon" :icon="n.icon" />
         <template v-else>
@@ -40,7 +44,7 @@
 
 <style scoped>
 .header {
-  @apply flex justify-between p8;
+  @apply flex justify-between p8 <md:py6;
 }
 .header a {
   @apply op-60 hover:op-100 transition-200 ease;

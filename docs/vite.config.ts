@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [
     Unocss(),
     SearchPlugin({
-      placeholder: 'Procure por algo!',
-      buttonLabel: 'Procurar',
+      placeholder: 'Search Posts',
+      buttonLabel: 'Search',
       previewLength: 10
     })
   ],

@@ -43,6 +43,9 @@ devDependencies:
   eslint:
     specifier: ^8.47.0
     version: 8.47.0
+  flexsearch:
+    specifier: ^0.7.31
+    version: 0.7.31
   lint-staged:
     specifier: ^14.0.0
     version: 14.0.0

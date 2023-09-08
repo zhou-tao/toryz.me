@@ -8,13 +8,14 @@ import Layout from './layout/index.vue'
 
 export default {
   Layout,
-  async enhanceApp({ app, router, siteData }) {
+  async enhanceApp({ app, router }) {
+    // @ts-expect-error SSR env
     if (!import.meta.env.SSR) {
       const NProgress = await import('nprogress')
-      router.onBeforeRouteChange = (to) => {
+      router.onBeforeRouteChange = () => {
         NProgress.start()
       }
-      router.onBeforePageLoad = (to) => {
+      router.onBeforePageLoad = () => {
         NProgress.done()
       }
     }

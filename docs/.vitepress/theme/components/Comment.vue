@@ -1,6 +1,8 @@
 <script setup lang='ts'>
   import { computed } from 'vue'
   import { useData, useRoute } from 'vitepress'
+
+  // @ts-expect-error waline
   import { Waline } from '@waline/client/component'
   import '@waline/client/dist/waline.css'
 
