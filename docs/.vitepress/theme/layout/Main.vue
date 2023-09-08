@@ -33,6 +33,6 @@
 
 <style scoped>
 .main {
-  @apply px-(8 md:12) py-(6 md:10) of-x-hidden max-w-main m-auto;
+  @apply px8 md:px16 py6 md:py10 of-x-hidden max-w-main m-auto;
 }
 </style>

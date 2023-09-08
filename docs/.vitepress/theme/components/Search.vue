@@ -13,6 +13,7 @@
 #docsearch, .VPPluginSearch-modal-back {
   --text: #555;
   --text-deep: #222;
+  --text-deeper: #000;
   --border: #55555520;
 }
 
@@ -20,6 +21,7 @@ html.dark #docsearch,
 html.dark .VPPluginSearch-modal-back {
   --text: #bbb;
   --text-deep: #ddd;
+  --text-deeper: #fff;
   --border: #bbbbbb20;
 }
 
@@ -61,10 +63,20 @@ html.dark .VPPluginSearch-modal-back {
 }
 
 .VPPluginSearch-search-list > div {
-  color: var(--text-deep);
+  color: var(--text);
 }
 
 .VPPluginSearch-search-item-icon {
   padding-top: 6px;
+}
+
+.VPPluginSearch-search-item {
+  padding: 0.8rem 1rem;
+  margin: 12px 0 0 0;
+  transition: color ease 0.3s;
+}
+
+.VPPluginSearch-search-item:hover {
+  color: var(--text-deeper);
 }
 </style>
