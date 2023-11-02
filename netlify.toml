@@ -1,9 +1,12 @@
+[functions]
+  directory = "netlify/functions"
+
 [build.environment]
   NODE_VERSION = "16"
 
 [build]
-  publish = "docs/.vitepress/dist"
   command = "pnpm run build"
+  publish = "docs/.vitepress/dist"
 
 [[redirects]]
   from = "/*"
