@@ -1,8 +1,8 @@
 .custom-block {
   --vp-custom-block-font-size: 14px;
   --vp-custom-block-code-font-size: 13px;
-  --vp-c-text-1: rgba(235, 235, 245, .86);
-  --vp-c-text-2: rgba(235, 235, 245, .6);
+  --vp-c-text-1: rgba(20, 20, 10, .86);
+  --vp-c-text-2: rgba(20, 20, 10, .6);
   --vp-c-default-soft: rgba(101, 117, 133, .16);
   --vp-c-brand-1: #a8b1ff;
   --vp-c-brand-2: #5c73e7;
@@ -38,6 +38,11 @@
   --vp-custom-block-details-text: var(--vp-custom-block-info-text);
   --vp-custom-block-details-bg: var(--vp-custom-block-info-bg);
   --vp-custom-block-details-code-bg: var(--vp-custom-block-info-code-bg);
+}
+
+.dark .custom-block {
+  --vp-c-text-1: rgba(235, 235, 245, .86);
+  --vp-c-text-2: rgba(235, 235, 245, .6);
 }
 
 .custom-block {
@@ -146,6 +151,16 @@
 
 .custom-block-title {
   font-weight: 600;
+}
+
+.custom-block.tip .custom-block-title {
+  color: var(--vp-c-brand-2);
+}
+.custom-block.warning .custom-block-title {
+  color: var(--vp-c-warning-2);
+}
+.custom-block.danger .custom-block-title {
+  color: var(--vp-c-danger-2);
 }
 
 .custom-block p + p {
