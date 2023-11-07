@@ -16,7 +16,7 @@ export default defineConfigWithTheme({
   themeConfig: {
     logo: '/logo.svg',
     nav: [
-      { text: '博客', link: '/posts' },
+      { text: '文章', link: '/posts' },
       { text: '项目', link: '/projects' },
       { text: '友链', link: '/friend-links' },
       {
