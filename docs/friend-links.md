@@ -2,7 +2,9 @@
 layout: List
 title: FriendLinks
 items:
-  - text: Blackman99
-    link: https://github.com/Blackman99
-    description: !
+  - text: Dongsheng - Blog
+    link: https://blog.donsen.site/
+
+  - text: 玉藻前 - Zhihu
+    link: https://www.zhihu.com/people/EinzbernHK
 ---
