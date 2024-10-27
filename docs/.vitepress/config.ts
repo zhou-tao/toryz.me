@@ -18,6 +18,7 @@ export default defineConfigWithTheme({
     nav: [
       { text: '文章', link: '/posts' },
       { text: '项目', link: '/projects' },
+      { text: '分享', link: '/talks' },
       { text: '友链', link: '/friend-links' },
       {
         text: '为爱发电',
