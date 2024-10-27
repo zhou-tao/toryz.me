@@ -32,7 +32,7 @@
     >
       <a :href="item.link" class="item inline-block border-none! rounded">
         <li flex px4 pt3 pb-6>
-          <Icon v-if="item.icon" :icon="item.icon" size="1.8rem" opacity-50 mr4 mt2.5 flex-shrink-0 />
+          <Icon v-if="item.icon" :icon="item.icon" size="1.8rem" opacity-50 mr4 mt2 flex-shrink-0 />
           <div>
             <div text-1.3rem>{{ item.text }}</div>
             <div text-base opacity-50 font-normal line-clamp-2>{{ item.description }}</div>
