@@ -30,11 +30,19 @@
         '--enter-step': '240ms',
       }"
     >
-      <a :href="item.link" class="item inline-block border-none! rounded">
-        <li flex px4 pt3 pb-6>
+      <a
+        :href="item.link"
+        :target="item.link.startsWith('http') ? '_blank' : undefined"
+        rel="noopener"
+        class="item block h-full border-none! rounded"
+      >
+        <li class="flex h-full px4 pt3 pb-6">
           <Icon v-if="item.icon" :icon="item.icon" size="1.8rem" opacity-50 mr4 mt2 flex-shrink-0 />
           <div>
-            <div text-1.3rem>{{ item.text }}</div>
+            <div flex items-center gap-2>
+              <span text-1.3rem>{{ item.text }}</span>
+              <span v-if="item.ai" class="i-carbon-ai opacity-60 flex-shrink-0" />
+            </div>
             <div text-base opacity-50 font-normal line-clamp-2>{{ item.description }}</div>
           </div>
         </li>
@@ -45,7 +53,7 @@
 
 <style scoped>
 .card {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-y6;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-x-1 gap-y6;
 }
 
 .item:hover {
