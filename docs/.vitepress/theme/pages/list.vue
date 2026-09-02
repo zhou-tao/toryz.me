@@ -38,7 +38,12 @@
           '--enter-step': '60ms',
         }"
       >
-        <a :href="item.link" class="item">
+        <a
+          :href="item.link"
+          :target="item.link.startsWith('http') ? '_blank' : undefined"
+          rel="noopener"
+          class="item"
+        >
           <li class="list-none! text-1.3rem leading-1.2em my-4.5 tracking-wide">
             {{ item.text }}
             <span text-base op60 ml2 font-sans>{{ item.time }}</span>

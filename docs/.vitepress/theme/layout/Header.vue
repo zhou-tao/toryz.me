@@ -29,7 +29,14 @@
     </div>
     <nav class="nav">
       <Search />
-      <a v-for="n in nav" :key="n.link" :href="n.link" :title="n.text">
+      <a
+        v-for="n in nav"
+        :key="n.link"
+        :href="n.link"
+        :target="n.link.startsWith('http') ? '_blank' : undefined"
+        rel="noopener"
+        :title="n.text"
+      >
         <Icon v-if="n.icon" :icon="n.icon" />
         <template v-else>
           {{ n.text }}
